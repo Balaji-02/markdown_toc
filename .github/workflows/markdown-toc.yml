@@ -21,4 +21,4 @@ jobs:
           table_of_contents=$(markdown-toc -i README.md)
           echo "Generated Table of Contents:"
           echo "${table_of_contents}"
-          echo "::set-env name=TABLE_OF_CONTENTS::${table_of_contents}"
+          echo "TABLE_OF_CONTENTS=${table_of_contents}" >> $GITHUB_ENV
