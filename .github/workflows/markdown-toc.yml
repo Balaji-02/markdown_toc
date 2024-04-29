@@ -18,7 +18,7 @@ jobs:
       
       - name: Generate Table of Contents
         run: |
-          markdown-toc -i README.md
-          table_of_contents=$(<README.md)
+          table_of_contents=$(markdown-toc -i README.md)
           echo "Generated Table of Contents:"
-          echo "${{ env.TABLE_OF_CONTENTS }}"
+          echo "${table_of_contents}"
+          echo "::set-env name=TABLE_OF_CONTENTS::${table_of_contents}"
