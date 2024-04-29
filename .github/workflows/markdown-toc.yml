@@ -12,8 +12,14 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Generate Table of Contents
-      uses: michaeldfallen/markdown-toc@v2
+      
+    - name: Install Node.js
+      uses: actions/setup-node@v2
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        node-version: '14'
+      
+    - name: Install markdown-toc
+      run: npm install -g markdown-toc
+      
+    - name: Generate Table of Contents
+      run: markdown-toc -i README.md
