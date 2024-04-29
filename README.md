@@ -4,7 +4,7 @@ Creating a workflow that runs on push to any branch and uses actions to automati
 
 ## Introduction
 
-In this guide, we'll walk through the process of setting up a Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions to automatically generate a table of contents for your Markdown documentation file.
+In this guide, we'll walk through the process of setting up a Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions to automatically generate a table of contents for your Markdown documentation files.
 
 ## Prerequisites
 
