@@ -17,4 +17,7 @@ jobs:
         run: npm install markdown-toc -g
       
       - name: Generate Table of Contents
-        run: markdown-toc -i README.md
+        run: |
+          markdown-toc -i README.md
+          table_of_contents=$(<README.md)
+          echo "::set-output name=table_of_contents::$table_of_contents"
