@@ -10,16 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      - name: Install markdown-toc
+        run: npm install markdown-toc -g
       
-    - name: Install markdown-toc
-      run: npm install -g markdown-toc
-      
-    - name: Generate Table of Contents
-      run: markdown-toc -i README.md
+      - name: Generate Table of Contents
+        run: markdown-toc -i README.md
